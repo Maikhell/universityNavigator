@@ -1,11 +1,15 @@
 package com.main;
 
+import java.awt.Toolkit;
+
 public class Dashboard extends javax.swing.JFrame {
 
     private HiddenLogin hiddenLogin;
+    private int clickCount = 0;
 
     public Dashboard() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icons/cvsuSLogo.png")));
         hiddenLogin = new HiddenLogin();
 
     }
@@ -145,7 +149,12 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void mapsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mapsBtnActionPerformed
-
+        Campus_Map cMap = new Campus_Map();
+        cMap.pack();
+        cMap.setLocationRelativeTo(null);
+        cMap.setResizable(false);
+        cMap.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_mapsBtnActionPerformed
 
     private void exitIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitIconMouseClicked
@@ -156,7 +165,11 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_exitIconMouseClicked
 
     private void secretClickableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_secretClickableMouseClicked
-       hiddenLogin.secretClickableMouseClicked(evt);
+        hiddenLogin.secretClickableMouseClicked(evt);
+        clickCount++;
+        if (clickCount == 5) { //Click Limit Before Pop up
+            this.dispose();
+        }
     }//GEN-LAST:event_secretClickableMouseClicked
 
     private void teacherBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teacherBtnActionPerformed

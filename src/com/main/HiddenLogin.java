@@ -13,6 +13,7 @@ public class HiddenLogin {
         clickCount++; // Increment the click count
 
         if (clickCount == 5) { //Click Limit Before Pop up
+
             showPasswordDialog();
         }
     }
@@ -27,8 +28,12 @@ public class HiddenLogin {
             if (isPasswordCorrect(enteredPassword)) {
 
                 JOptionPane.showMessageDialog(null, "Welcome Back Admin! + Name");
-                switchToNextFrame(evt);
-                //WILL NOT SWITCH FRAME YET! FIX THIS 
+                Login_Page loginFrame = new Login_Page();
+                loginFrame.pack();
+                loginFrame.setLocationRelativeTo(null);
+                loginFrame.setResizable(false);
+                loginFrame.setVisible(true);
+
             } else {
                 // Error Output
                 JOptionPane.showMessageDialog(null, "Unauthorized Personnel Only", "Error", JOptionPane.ERROR_MESSAGE);
@@ -44,15 +49,4 @@ public class HiddenLogin {
         return CORRECT_PASSWORD.equals(password); // Compare with the correct password
     }
 
-    // Method to switch to the next frame
-    private void switchToNextFrame(MouseEvent evt) {
-        Login_Page nextFrame = new Login_Page(); // Replace with your next frame class
-        nextFrame.setVisible(true); 
-        // Dispose of the current frame NO DISPOSE CODE HERE
-        JFrame currentFrame = (JFrame) SwingUtilities.getWindowAncestor((JComponent) evt.getSource());
-        if (currentFrame != null) {
-            currentFrame.dispose();
-        }
-    }
-    
 }

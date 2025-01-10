@@ -4,6 +4,8 @@
  */
 package com.main;
 
+import java.awt.Toolkit;
+
 /**
  *
  * @author J-Michael
@@ -15,6 +17,7 @@ public class Register_Page extends javax.swing.JFrame {
      */
     public Register_Page() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icons/cvsuSLogo.png")));
     }
 
     /**
@@ -26,21 +29,168 @@ public class Register_Page extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        innerPanel = new javax.swing.JPanel();
+        fullnameLbl = new javax.swing.JLabel();
+        titleLbl = new javax.swing.JLabel();
+        passwordLbl = new javax.swing.JLabel();
+        departmentLbl = new javax.swing.JLabel();
+        confirmpassLbl = new javax.swing.JLabel();
+        emailLbl = new javax.swing.JLabel();
+        designationLbl = new javax.swing.JLabel();
+        questionLbl = new javax.swing.JLabel();
+        signinLbl = new javax.swing.JLabel();
+        signupbtn = new javax.swing.JButton();
+        designationField = new javax.swing.JTextField();
+        fullnameField = new javax.swing.JTextField();
+        emailField = new javax.swing.JTextField();
+        departmentField = new javax.swing.JTextField();
+        passwordField = new javax.swing.JPasswordField();
+        confirmpassField = new javax.swing.JPasswordField();
+        signinImage = new javax.swing.JLabel();
+        exitIcon = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        innerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        fullnameLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        fullnameLbl.setForeground(new java.awt.Color(0, 0, 0));
+        fullnameLbl.setText("Full name");
+        innerPanel.add(fullnameLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 160, 30));
+
+        titleLbl.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
+        titleLbl.setForeground(new java.awt.Color(0, 0, 0));
+        titleLbl.setText("Sign In");
+        innerPanel.add(titleLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, -1, -1));
+
+        passwordLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        passwordLbl.setForeground(new java.awt.Color(0, 0, 0));
+        passwordLbl.setText("Password");
+        innerPanel.add(passwordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 160, 30));
+
+        departmentLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        departmentLbl.setForeground(new java.awt.Color(0, 0, 0));
+        departmentLbl.setText("Department");
+        innerPanel.add(departmentLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 160, 30));
+
+        confirmpassLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        confirmpassLbl.setForeground(new java.awt.Color(0, 0, 0));
+        confirmpassLbl.setText("Confirm Password");
+        innerPanel.add(confirmpassLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 160, 30));
+
+        emailLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        emailLbl.setForeground(new java.awt.Color(0, 0, 0));
+        emailLbl.setText("Email");
+        innerPanel.add(emailLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 160, 30));
+
+        designationLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        designationLbl.setForeground(new java.awt.Color(0, 0, 0));
+        designationLbl.setText("Username");
+        innerPanel.add(designationLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 160, 30));
+
+        questionLbl.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        questionLbl.setForeground(new java.awt.Color(0, 0, 0));
+        questionLbl.setText("Already Have an Account?");
+        questionLbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                questionLblMouseClicked(evt);
+            }
+        });
+        innerPanel.add(questionLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, -1, 30));
+
+        signinLbl.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        signinLbl.setForeground(new java.awt.Color(51, 204, 0));
+        signinLbl.setText("Login in here");
+        signinLbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signinLblMouseClicked(evt);
+            }
+        });
+        innerPanel.add(signinLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 80, 30));
+
+        signupbtn.setBackground(new java.awt.Color(0, 0, 0));
+        signupbtn.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        signupbtn.setForeground(new java.awt.Color(255, 255, 255));
+        signupbtn.setText("Sign Up");
+        innerPanel.add(signupbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 110, 40));
+
+        designationField.setBackground(new java.awt.Color(240, 240, 215));
+        innerPanel.add(designationField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 160, 30));
+
+        fullnameField.setBackground(new java.awt.Color(240, 240, 215));
+        innerPanel.add(fullnameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 160, 30));
+
+        emailField.setBackground(new java.awt.Color(240, 240, 215));
+        innerPanel.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 160, 30));
+
+        departmentField.setBackground(new java.awt.Color(240, 240, 215));
+        innerPanel.add(departmentField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 160, 30));
+
+        passwordField.setBackground(new java.awt.Color(240, 240, 215));
+        passwordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordFieldActionPerformed(evt);
+            }
+        });
+        innerPanel.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 160, 30));
+
+        confirmpassField.setBackground(new java.awt.Color(240, 240, 215));
+        innerPanel.add(confirmpassField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 160, 30));
+
+        signinImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/signin.png"))); // NOI18N
+        innerPanel.add(signinImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 480));
+
+        exitIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/exit.png"))); // NOI18N
+        exitIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitIconMouseClicked(evt);
+            }
+        });
+        innerPanel.add(exitIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 30, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(innerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(innerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordFieldActionPerformed
+
+    private void questionLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_questionLblMouseClicked
+        Login_Page lPage = new Login_Page();
+        lPage.pack();
+        lPage.setLocationRelativeTo(null);
+        lPage.setResizable(false);
+        lPage.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_questionLblMouseClicked
+
+    private void signinLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signinLblMouseClicked
+        Login_Page lPage = new Login_Page();
+        lPage.pack();
+        lPage.setLocationRelativeTo(null);
+        lPage.setResizable(false);
+        lPage.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_signinLblMouseClicked
+
+    private void exitIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitIconMouseClicked
+        ConfirmationDialog dialog = new ConfirmationDialog(this);
+        if (dialog.showExitConfirmation()) {
+            System.exit(0);
+        };
+    }//GEN-LAST:event_exitIconMouseClicked
 
     /**
      * @param args the command line arguments
@@ -72,11 +222,35 @@ public class Register_Page extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Register_Page().setVisible(true);
+                Register_Page rPage = new Register_Page();
+                rPage.pack();
+                rPage.setLocationRelativeTo(null);
+                rPage.setResizable(false);
+                rPage.setVisible(true);
+
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField confirmpassField;
+    private javax.swing.JLabel confirmpassLbl;
+    private javax.swing.JTextField departmentField;
+    private javax.swing.JLabel departmentLbl;
+    private javax.swing.JTextField designationField;
+    private javax.swing.JLabel designationLbl;
+    private javax.swing.JTextField emailField;
+    private javax.swing.JLabel emailLbl;
+    private javax.swing.JLabel exitIcon;
+    private javax.swing.JTextField fullnameField;
+    private javax.swing.JLabel fullnameLbl;
+    private javax.swing.JPanel innerPanel;
+    private javax.swing.JPasswordField passwordField;
+    private javax.swing.JLabel passwordLbl;
+    private javax.swing.JLabel questionLbl;
+    private javax.swing.JLabel signinImage;
+    private javax.swing.JLabel signinLbl;
+    private javax.swing.JButton signupbtn;
+    private javax.swing.JLabel titleLbl;
     // End of variables declaration//GEN-END:variables
 }
