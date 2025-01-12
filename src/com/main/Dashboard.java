@@ -19,7 +19,7 @@ public class Dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         innerPanel = new javax.swing.JPanel();
-        sectionBtn = new javax.swing.JButton();
+        courseBtn = new javax.swing.JButton();
         infoBtn = new javax.swing.JButton();
         mapsBtn = new javax.swing.JButton();
         teacherBtn = new javax.swing.JButton();
@@ -35,7 +35,6 @@ public class Dashboard extends javax.swing.JFrame {
         setLocation(new java.awt.Point(0, 0));
         setMinimumSize(new java.awt.Dimension(1273, 714));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1220, 714));
         setSize(new java.awt.Dimension(1220, 714));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -45,15 +44,20 @@ public class Dashboard extends javax.swing.JFrame {
 
         innerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        sectionBtn.setBackground(new java.awt.Color(0, 0, 0));
-        sectionBtn.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        sectionBtn.setForeground(new java.awt.Color(255, 255, 255));
-        sectionBtn.setText("Sections");
-        sectionBtn.setMargin(new java.awt.Insets(5, 15, 5, 15));
-        sectionBtn.setMaximumSize(new java.awt.Dimension(90, 30));
-        sectionBtn.setMinimumSize(new java.awt.Dimension(90, 30));
-        sectionBtn.setPreferredSize(new java.awt.Dimension(166, 66));
-        innerPanel.add(sectionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, -1, -1));
+        courseBtn.setBackground(new java.awt.Color(0, 0, 0));
+        courseBtn.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        courseBtn.setForeground(new java.awt.Color(255, 255, 255));
+        courseBtn.setText("Course");
+        courseBtn.setMargin(new java.awt.Insets(5, 15, 5, 15));
+        courseBtn.setMaximumSize(new java.awt.Dimension(90, 30));
+        courseBtn.setMinimumSize(new java.awt.Dimension(90, 30));
+        courseBtn.setPreferredSize(new java.awt.Dimension(166, 66));
+        courseBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                courseBtnActionPerformed(evt);
+            }
+        });
+        innerPanel.add(courseBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, -1, -1));
 
         infoBtn.setBackground(new java.awt.Color(0, 0, 0));
         infoBtn.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
@@ -149,16 +153,11 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void mapsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mapsBtnActionPerformed
-        Campus_Map cMap = new Campus_Map();
-        cMap.pack();
-        cMap.setLocationRelativeTo(null);
-        cMap.setResizable(false);
-        cMap.setVisible(true);
-        this.dispose();
+        FrameSwitch.showMapPage(this);
     }//GEN-LAST:event_mapsBtnActionPerformed
 
     private void exitIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitIconMouseClicked
-        ConfirmationDialog dialog = new ConfirmationDialog(this);
+        Exit_Dialog dialog = new Exit_Dialog(this);
         if (dialog.showExitConfirmation()) {
             System.exit(0);
         };
@@ -167,7 +166,7 @@ public class Dashboard extends javax.swing.JFrame {
     private void secretClickableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_secretClickableMouseClicked
         hiddenLogin.secretClickableMouseClicked(evt);
         clickCount++;
-        if (clickCount == 5) { //Click Limit Before Pop up
+        if (clickCount == 5) {
             this.dispose();
         }
     }//GEN-LAST:event_secretClickableMouseClicked
@@ -175,6 +174,10 @@ public class Dashboard extends javax.swing.JFrame {
     private void teacherBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teacherBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_teacherBtnActionPerformed
+
+    private void courseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_courseBtnActionPerformed
+        FrameSwitch.showCoursePage(this);
+    }//GEN-LAST:event_courseBtnActionPerformed
 
     public static void main(String args[]) {
 
@@ -211,13 +214,13 @@ public class Dashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel aboutLabel;
     private javax.swing.JLabel contactUsLabel;
+    private javax.swing.JButton courseBtn;
     private javax.swing.JLabel dashboardImage;
     private javax.swing.JLabel exitIcon;
     private javax.swing.JButton infoBtn;
     private javax.swing.JPanel innerPanel;
     private javax.swing.JButton mapsBtn;
     private javax.swing.JLabel secretClickable;
-    private javax.swing.JButton sectionBtn;
     private javax.swing.JButton teacherBtn;
     private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables

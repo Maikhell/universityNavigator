@@ -5,17 +5,18 @@
 package com.main;
 
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author J-Michael
  */
-public class Register_Page extends javax.swing.JFrame {
+public class Signin_Page extends javax.swing.JFrame {
 
     /**
      * Creates new form Register_Page
      */
-    public Register_Page() {
+    public Signin_Page() {
         initComponents();
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icons/cvsuSLogo.png")));
     }
@@ -30,6 +31,8 @@ public class Register_Page extends javax.swing.JFrame {
     private void initComponents() {
 
         innerPanel = new javax.swing.JPanel();
+        homeLbl = new javax.swing.JLabel();
+        loginLbl = new javax.swing.JLabel();
         fullnameLbl = new javax.swing.JLabel();
         titleLbl = new javax.swing.JLabel();
         passwordLbl = new javax.swing.JLabel();
@@ -53,6 +56,21 @@ public class Register_Page extends javax.swing.JFrame {
         setUndecorated(true);
 
         innerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        homeLbl.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        homeLbl.setForeground(new java.awt.Color(0, 0, 0));
+        homeLbl.setText("Home >");
+        homeLbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeLblMouseClicked(evt);
+            }
+        });
+        innerPanel.add(homeLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, 40));
+
+        loginLbl.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        loginLbl.setForeground(new java.awt.Color(0, 153, 51));
+        loginLbl.setText("Login");
+        innerPanel.add(loginLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 40));
 
         fullnameLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
         fullnameLbl.setForeground(new java.awt.Color(0, 0, 0));
@@ -168,29 +186,28 @@ public class Register_Page extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     private void questionLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_questionLblMouseClicked
-        Login_Page lPage = new Login_Page();
-        lPage.pack();
-        lPage.setLocationRelativeTo(null);
-        lPage.setResizable(false);
-        lPage.setVisible(true);
-        this.dispose();
+        FrameSwitch.showLoginPage(this);
     }//GEN-LAST:event_questionLblMouseClicked
 
     private void signinLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signinLblMouseClicked
-        Login_Page lPage = new Login_Page();
-        lPage.pack();
-        lPage.setLocationRelativeTo(null);
-        lPage.setResizable(false);
-        lPage.setVisible(true);
-        this.dispose();
+        FrameSwitch.showLoginPage(this);
     }//GEN-LAST:event_signinLblMouseClicked
 
     private void exitIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitIconMouseClicked
-        ConfirmationDialog dialog = new ConfirmationDialog(this);
+        Exit_Dialog dialog = new Exit_Dialog(this);
         if (dialog.showExitConfirmation()) {
             System.exit(0);
         };
     }//GEN-LAST:event_exitIconMouseClicked
+
+    private void homeLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeLblMouseClicked
+        int option = JOptionPane.showConfirmDialog(null,
+                "Are you sure you want to Log out?", "Log Out Confirmation",
+                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (option == JOptionPane.YES_OPTION) {
+            FrameSwitch.showDashboard(this);
+        }
+    }//GEN-LAST:event_homeLblMouseClicked
 
     /**
      * @param args the command line arguments
@@ -209,20 +226,21 @@ public class Register_Page extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Register_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Signin_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Register_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Signin_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Register_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Signin_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Register_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Signin_Page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Register_Page rPage = new Register_Page();
+                Signin_Page rPage = new Signin_Page();
                 rPage.pack();
                 rPage.setLocationRelativeTo(null);
                 rPage.setResizable(false);
@@ -244,7 +262,9 @@ public class Register_Page extends javax.swing.JFrame {
     private javax.swing.JLabel exitIcon;
     private javax.swing.JTextField fullnameField;
     private javax.swing.JLabel fullnameLbl;
+    private javax.swing.JLabel homeLbl;
     private javax.swing.JPanel innerPanel;
+    private javax.swing.JLabel loginLbl;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel passwordLbl;
     private javax.swing.JLabel questionLbl;

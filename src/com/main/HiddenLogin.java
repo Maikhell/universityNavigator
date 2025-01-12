@@ -20,6 +20,7 @@ public class HiddenLogin {
 
     // Method to show the password dialog
     private void showPasswordDialog() {
+        Dashboard dash = new Dashboard();
         JPasswordField passwordField = new JPasswordField();
         int option = JOptionPane.showConfirmDialog(null, passwordField, "Enter Password", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
@@ -33,11 +34,21 @@ public class HiddenLogin {
                 loginFrame.setLocationRelativeTo(null);
                 loginFrame.setResizable(false);
                 loginFrame.setVisible(true);
-
+                Dashboard db = new Dashboard();
+                db.dispose();
+            } else if (option == JOptionPane.CANCEL_OPTION) {
+                Dashboard dashFrame = new Dashboard();
+                dashFrame.pack();
+                dashFrame.setLocationRelativeTo(null);
+                dashFrame.setResizable(false);
+                dashFrame.setVisible(true);
             } else {
-                // Error Output
-                JOptionPane.showMessageDialog(null, "Unauthorized Personnel Only", "Error", JOptionPane.ERROR_MESSAGE);
-
+                JOptionPane.showMessageDialog(dash, "Unauthorized Personnel Only", "Error", JOptionPane.ERROR_MESSAGE);
+                Dashboard dashFrame = new Dashboard();
+                dashFrame.pack();
+                dashFrame.setLocationRelativeTo(null);
+                dashFrame.setResizable(false);
+                dashFrame.setVisible(true);
             }
         }
         clickCount = 0;

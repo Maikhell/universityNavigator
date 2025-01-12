@@ -1,11 +1,11 @@
 
 package com.main;
 import javax.swing.*;
-public class ConfirmationDialog {
+public class Exit_Dialog {
     private JFrame parentFrame;
 
     // Constructor to initialize with a parent frame
-    public ConfirmationDialog(JFrame parentFrame) {
+    public Exit_Dialog(JFrame parentFrame) {
         this.parentFrame = parentFrame;
     }
 

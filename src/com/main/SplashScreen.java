@@ -17,8 +17,7 @@ public class SplashScreen extends javax.swing.JFrame {
      */
     public SplashScreen() {
         initComponents();
-         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource
-        ("/icons/cvsuSLogo.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icons/cvsuSLogo.png")));
     }
 
     /**
@@ -42,6 +41,7 @@ public class SplashScreen extends javax.swing.JFrame {
         innerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblperCount.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        lblperCount.setForeground(new java.awt.Color(0, 51, 0));
         lblperCount.setText("%");
         innerPanel.add(lblperCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 40, 10));
 
@@ -108,7 +108,7 @@ public class SplashScreen extends javax.swing.JFrame {
                 ssc.setResizable(false);
                 ssc.setVisible(true);
                 ssc.setVisible(true);
-               
+
             }
         });
 
