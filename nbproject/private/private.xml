@@ -3,13 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/Register_Page.java</file>
-            <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/ConfirmationDialog.java</file>
+            <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/BsCS.java</file>
+            <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/Exit_Dialog.java</file>
+            <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/Signin_Page.java</file>
             <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/Campus_Map.java</file>
             <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/SplashScreen.java</file>
             <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/Login_Page.java</file>
             <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/Dashboard.java</file>
             <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/HiddenLogin.java</file>
+            <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/FrameSwitch.java</file>
+            <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/BsIT.java</file>
+            <file>file:/C:/Users/John%20PC/Documents/NetBeansProjects/UniversityNavigator_CvSU/src/com/main/Course.java</file>
         </group>
     </open-files>
 </project-private>

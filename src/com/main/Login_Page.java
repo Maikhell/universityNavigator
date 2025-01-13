@@ -70,17 +70,17 @@ public class Login_Page extends javax.swing.JFrame {
         loginLbl.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         loginLbl.setForeground(new java.awt.Color(0, 153, 51));
         loginLbl.setText("Login");
-        innerPanel.add(loginLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, 40));
+        innerPanel.add(loginLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 40, 40));
 
         homeLbl.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        homeLbl.setForeground(new java.awt.Color(0, 0, 0));
+        homeLbl.setForeground(new java.awt.Color(255, 255, 255));
         homeLbl.setText("Home >");
         homeLbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 homeLblMouseClicked(evt);
             }
         });
-        innerPanel.add(homeLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, -1, 40));
+        innerPanel.add(homeLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 50, 40));
 
         createAccLbl.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         createAccLbl.setForeground(new java.awt.Color(51, 204, 0));
@@ -108,7 +108,7 @@ public class Login_Page extends javax.swing.JFrame {
         innerPanel.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, -1));
 
         loginImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login.png"))); // NOI18N
-        innerPanel.add(loginImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 440, 480));
+        innerPanel.add(loginImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 460));
 
         exitIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/exit.png"))); // NOI18N
         exitIcon.addMouseListener(new java.awt.event.MouseAdapter() {

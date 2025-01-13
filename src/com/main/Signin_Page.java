@@ -33,20 +33,16 @@ public class Signin_Page extends javax.swing.JFrame {
         innerPanel = new javax.swing.JPanel();
         homeLbl = new javax.swing.JLabel();
         loginLbl = new javax.swing.JLabel();
-        fullnameLbl = new javax.swing.JLabel();
         titleLbl = new javax.swing.JLabel();
         passwordLbl = new javax.swing.JLabel();
-        departmentLbl = new javax.swing.JLabel();
         confirmpassLbl = new javax.swing.JLabel();
         emailLbl = new javax.swing.JLabel();
         designationLbl = new javax.swing.JLabel();
         questionLbl = new javax.swing.JLabel();
         signinLbl = new javax.swing.JLabel();
         signupbtn = new javax.swing.JButton();
-        designationField = new javax.swing.JTextField();
         fullnameField = new javax.swing.JTextField();
         emailField = new javax.swing.JTextField();
-        departmentField = new javax.swing.JTextField();
         passwordField = new javax.swing.JPasswordField();
         confirmpassField = new javax.swing.JPasswordField();
         signinImage = new javax.swing.JLabel();
@@ -58,24 +54,19 @@ public class Signin_Page extends javax.swing.JFrame {
         innerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         homeLbl.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        homeLbl.setForeground(new java.awt.Color(0, 0, 0));
+        homeLbl.setForeground(new java.awt.Color(255, 255, 255));
         homeLbl.setText("Home >");
         homeLbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 homeLblMouseClicked(evt);
             }
         });
-        innerPanel.add(homeLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, 40));
+        innerPanel.add(homeLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 40));
 
         loginLbl.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         loginLbl.setForeground(new java.awt.Color(0, 153, 51));
         loginLbl.setText("Login");
-        innerPanel.add(loginLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 40));
-
-        fullnameLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
-        fullnameLbl.setForeground(new java.awt.Color(0, 0, 0));
-        fullnameLbl.setText("Full name");
-        innerPanel.add(fullnameLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 160, 30));
+        innerPanel.add(loginLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, 40));
 
         titleLbl.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
         titleLbl.setForeground(new java.awt.Color(0, 0, 0));
@@ -87,11 +78,6 @@ public class Signin_Page extends javax.swing.JFrame {
         passwordLbl.setText("Password");
         innerPanel.add(passwordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 160, 30));
 
-        departmentLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
-        departmentLbl.setForeground(new java.awt.Color(0, 0, 0));
-        departmentLbl.setText("Department");
-        innerPanel.add(departmentLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 160, 30));
-
         confirmpassLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
         confirmpassLbl.setForeground(new java.awt.Color(0, 0, 0));
         confirmpassLbl.setText("Confirm Password");
@@ -100,7 +86,7 @@ public class Signin_Page extends javax.swing.JFrame {
         emailLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
         emailLbl.setForeground(new java.awt.Color(0, 0, 0));
         emailLbl.setText("Email");
-        innerPanel.add(emailLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 160, 30));
+        innerPanel.add(emailLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 200, 30));
 
         designationLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
         designationLbl.setForeground(new java.awt.Color(0, 0, 0));
@@ -115,7 +101,7 @@ public class Signin_Page extends javax.swing.JFrame {
                 questionLblMouseClicked(evt);
             }
         });
-        innerPanel.add(questionLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, -1, 30));
+        innerPanel.add(questionLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, -1, 30));
 
         signinLbl.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         signinLbl.setForeground(new java.awt.Color(51, 204, 0));
@@ -125,7 +111,7 @@ public class Signin_Page extends javax.swing.JFrame {
                 signinLblMouseClicked(evt);
             }
         });
-        innerPanel.add(signinLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 450, 80, 30));
+        innerPanel.add(signinLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 80, 30));
 
         signupbtn.setBackground(new java.awt.Color(0, 0, 0));
         signupbtn.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
@@ -133,31 +119,29 @@ public class Signin_Page extends javax.swing.JFrame {
         signupbtn.setText("Sign Up");
         innerPanel.add(signupbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 110, 40));
 
-        designationField.setBackground(new java.awt.Color(240, 240, 215));
-        innerPanel.add(designationField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 160, 30));
-
         fullnameField.setBackground(new java.awt.Color(240, 240, 215));
+        fullnameField.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         innerPanel.add(fullnameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 160, 30));
 
         emailField.setBackground(new java.awt.Color(240, 240, 215));
-        innerPanel.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 160, 30));
-
-        departmentField.setBackground(new java.awt.Color(240, 240, 215));
-        innerPanel.add(departmentField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 160, 30));
+        emailField.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        innerPanel.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 210, 30));
 
         passwordField.setBackground(new java.awt.Color(240, 240, 215));
+        passwordField.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         passwordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordFieldActionPerformed(evt);
             }
         });
-        innerPanel.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 160, 30));
+        innerPanel.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 400, 30));
 
         confirmpassField.setBackground(new java.awt.Color(240, 240, 215));
-        innerPanel.add(confirmpassField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 160, 30));
+        confirmpassField.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        innerPanel.add(confirmpassField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 400, 30));
 
         signinImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/signin.png"))); // NOI18N
-        innerPanel.add(signinImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 480));
+        innerPanel.add(signinImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 510));
 
         exitIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/exit.png"))); // NOI18N
         exitIcon.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -253,15 +237,11 @@ public class Signin_Page extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField confirmpassField;
     private javax.swing.JLabel confirmpassLbl;
-    private javax.swing.JTextField departmentField;
-    private javax.swing.JLabel departmentLbl;
-    private javax.swing.JTextField designationField;
     private javax.swing.JLabel designationLbl;
     private javax.swing.JTextField emailField;
     private javax.swing.JLabel emailLbl;
     private javax.swing.JLabel exitIcon;
     private javax.swing.JTextField fullnameField;
-    private javax.swing.JLabel fullnameLbl;
     private javax.swing.JLabel homeLbl;
     private javax.swing.JPanel innerPanel;
     private javax.swing.JLabel loginLbl;

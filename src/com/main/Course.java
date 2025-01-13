@@ -132,7 +132,7 @@ public class Course extends javax.swing.JFrame {
         innerPanel.add(courseLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 60, 60));
 
         homeLbl.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        homeLbl.setForeground(new java.awt.Color(0, 0, 0));
+        homeLbl.setForeground(new java.awt.Color(255, 255, 255));
         homeLbl.setText("Home >");
         homeLbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -185,7 +185,7 @@ public class Course extends javax.swing.JFrame {
         FrameSwitch.showBSITPage(this);
     }//GEN-LAST:event_itBtnActionPerformed
 
-    /**
+    /** 
      * @param args the command line arguments
      */
     public static void main(String args[]) {

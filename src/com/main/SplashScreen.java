@@ -43,19 +43,19 @@ public class SplashScreen extends javax.swing.JFrame {
         lblperCount.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         lblperCount.setForeground(new java.awt.Color(0, 51, 0));
         lblperCount.setText("%");
-        innerPanel.add(lblperCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 40, 10));
+        innerPanel.add(lblperCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 40, 20));
 
         splashProgress.setBackground(new java.awt.Color(51, 204, 0));
         splashProgress.setForeground(new java.awt.Color(51, 204, 0));
-        innerPanel.add(splashProgress, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 354, 490, 20));
+        innerPanel.add(splashProgress, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 490, 20));
 
         loadingLbl.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
         loadingLbl.setForeground(new java.awt.Color(0, 102, 51));
         loadingLbl.setText("Loading Please Wait ...");
-        innerPanel.add(loadingLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 200, -1));
+        innerPanel.add(loadingLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 200, -1));
 
         splashImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/splashscreen.png"))); // NOI18N
-        innerPanel.add(splashImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 370));
+        innerPanel.add(splashImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 360));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

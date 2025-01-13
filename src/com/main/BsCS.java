@@ -4,6 +4,8 @@
  */
 package com.main;
 
+import java.awt.Toolkit;
+
 /**
  *
  * @author J-Michael
@@ -15,6 +17,7 @@ public class BsCS extends javax.swing.JFrame {
      */
     public BsCS() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icons/cvsuSLogo.png")));
     }
 
     /**
@@ -111,7 +114,7 @@ public class BsCS extends javax.swing.JFrame {
         innerPanel.add(exitIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 10, -1, -1));
 
         homeLbl.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        homeLbl.setForeground(new java.awt.Color(0, 0, 0));
+        homeLbl.setForeground(new java.awt.Color(255, 255, 255));
         homeLbl.setText("Home >");
         homeLbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -121,7 +124,7 @@ public class BsCS extends javax.swing.JFrame {
         innerPanel.add(homeLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, 20));
 
         courseLbl.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        courseLbl.setForeground(new java.awt.Color(0, 0, 0));
+        courseLbl.setForeground(new java.awt.Color(255, 255, 255));
         courseLbl.setText("Courses >");
         courseLbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -158,7 +161,7 @@ public class BsCS extends javax.swing.JFrame {
     }//GEN-LAST:event_homeLblMouseClicked
 
     private void courseLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_courseLblMouseClicked
-            FrameSwitch.showCoursePage(this);
+        FrameSwitch.showCoursePage(this);
     }//GEN-LAST:event_courseLblMouseClicked
 
     private void exitIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitIconMouseClicked

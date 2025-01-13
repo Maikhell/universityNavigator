@@ -45,7 +45,7 @@ public class Dashboard extends javax.swing.JFrame {
         innerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         courseBtn.setBackground(new java.awt.Color(0, 0, 0));
-        courseBtn.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        courseBtn.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
         courseBtn.setForeground(new java.awt.Color(255, 255, 255));
         courseBtn.setText("Course");
         courseBtn.setMargin(new java.awt.Insets(5, 15, 5, 15));
@@ -57,20 +57,25 @@ public class Dashboard extends javax.swing.JFrame {
                 courseBtnActionPerformed(evt);
             }
         });
-        innerPanel.add(courseBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, -1, -1));
+        innerPanel.add(courseBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 440, 240, 70));
 
         infoBtn.setBackground(new java.awt.Color(0, 0, 0));
-        infoBtn.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        infoBtn.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
         infoBtn.setForeground(new java.awt.Color(255, 255, 255));
         infoBtn.setText("Info");
         infoBtn.setMargin(new java.awt.Insets(5, 15, 5, 15));
         infoBtn.setMaximumSize(new java.awt.Dimension(90, 30));
         infoBtn.setMinimumSize(new java.awt.Dimension(90, 30));
         infoBtn.setPreferredSize(new java.awt.Dimension(166, 66));
-        innerPanel.add(infoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 540, -1, -1));
+        infoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                infoBtnActionPerformed(evt);
+            }
+        });
+        innerPanel.add(infoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 540, 240, 70));
 
         mapsBtn.setBackground(new java.awt.Color(0, 0, 0));
-        mapsBtn.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        mapsBtn.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
         mapsBtn.setForeground(new java.awt.Color(255, 255, 255));
         mapsBtn.setText("Maps");
         mapsBtn.setMargin(new java.awt.Insets(5, 15, 5, 15));
@@ -82,10 +87,10 @@ public class Dashboard extends javax.swing.JFrame {
                 mapsBtnActionPerformed(evt);
             }
         });
-        innerPanel.add(mapsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 340, -1, -1));
+        innerPanel.add(mapsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, 240, 70));
 
         teacherBtn.setBackground(new java.awt.Color(0, 0, 0));
-        teacherBtn.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        teacherBtn.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
         teacherBtn.setForeground(new java.awt.Color(255, 255, 255));
         teacherBtn.setText("Teachers");
         teacherBtn.setMargin(new java.awt.Insets(5, 15, 5, 15));
@@ -97,16 +102,26 @@ public class Dashboard extends javax.swing.JFrame {
                 teacherBtnActionPerformed(evt);
             }
         });
-        innerPanel.add(teacherBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, -1, -1));
+        innerPanel.add(teacherBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, 240, 70));
 
         contactUsLabel.setFont(new java.awt.Font("Ebrima", 1, 24)); // NOI18N
         contactUsLabel.setForeground(new java.awt.Color(255, 255, 255));
         contactUsLabel.setText("CONTACT ");
+        contactUsLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                contactUsLabelMouseClicked(evt);
+            }
+        });
         innerPanel.add(contactUsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 30, 120, 50));
 
         aboutLabel.setFont(new java.awt.Font("Ebrima", 1, 24)); // NOI18N
         aboutLabel.setForeground(new java.awt.Color(255, 255, 255));
         aboutLabel.setText("ABOUT");
+        aboutLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aboutLabelMouseClicked(evt);
+            }
+        });
         innerPanel.add(aboutLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 30, 90, 50));
 
         titleLabel.setFont(new java.awt.Font("Ebrima", 1, 48)); // NOI18N
@@ -172,12 +187,25 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_secretClickableMouseClicked
 
     private void teacherBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teacherBtnActionPerformed
-        // TODO add your handling code here:
+        FrameSwitch.showViewTeachers(this);
     }//GEN-LAST:event_teacherBtnActionPerformed
 
     private void courseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_courseBtnActionPerformed
         FrameSwitch.showCoursePage(this);
     }//GEN-LAST:event_courseBtnActionPerformed
+
+    private void infoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoBtnActionPerformed
+        FrameSwitch.showInfoPage(this);
+
+    }//GEN-LAST:event_infoBtnActionPerformed
+
+    private void aboutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutLabelMouseClicked
+        FrameSwitch.showAboutPage(this);
+    }//GEN-LAST:event_aboutLabelMouseClicked
+
+    private void contactUsLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contactUsLabelMouseClicked
+       FrameSwitch.showContactPage(this);
+    }//GEN-LAST:event_contactUsLabelMouseClicked
 
     public static void main(String args[]) {
 
