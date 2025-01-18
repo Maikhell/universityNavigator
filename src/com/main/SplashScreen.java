@@ -45,7 +45,7 @@ public class SplashScreen extends javax.swing.JFrame {
         lblperCount.setText("%");
         innerPanel.add(lblperCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 40, 20));
 
-        splashProgress.setBackground(new java.awt.Color(51, 204, 0));
+        splashProgress.setBackground(java.awt.Color.white);
         splashProgress.setForeground(new java.awt.Color(51, 204, 0));
         innerPanel.add(splashProgress, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 490, 20));
 

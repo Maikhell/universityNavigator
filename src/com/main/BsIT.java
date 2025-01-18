@@ -70,6 +70,11 @@ public class BsIT extends javax.swing.JFrame {
         firstBtn.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
         firstBtn.setForeground(new java.awt.Color(255, 255, 255));
         firstBtn.setText("1st Year");
+        firstBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstBtnActionPerformed(evt);
+            }
+        });
         innerPanel.add(firstBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 210, 300, 70));
 
         csSecLbl.setFont(new java.awt.Font("Ebrima", 1, 36)); // NOI18N
@@ -132,7 +137,7 @@ public class BsIT extends javax.swing.JFrame {
 
         bsitLbl.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         bsitLbl.setForeground(new java.awt.Color(0, 255, 51));
-        bsitLbl.setText("BSIT");
+        bsitLbl.setText("BSIT >");
         innerPanel.add(bsitLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, 20));
 
         itImage.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N
@@ -158,7 +163,7 @@ public class BsIT extends javax.swing.JFrame {
     }//GEN-LAST:event_homeLblMouseClicked
 
     private void courseLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_courseLblMouseClicked
-            FrameSwitch.showCoursePage(this);
+        FrameSwitch.showCoursePage(this);
     }//GEN-LAST:event_courseLblMouseClicked
 
     private void exitIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitIconMouseClicked
@@ -167,6 +172,10 @@ public class BsIT extends javax.swing.JFrame {
             System.exit(0);
         };
     }//GEN-LAST:event_exitIconMouseClicked
+
+    private void firstBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstBtnActionPerformed
+        FrameSwitch.showBSITSched(this);
+    }//GEN-LAST:event_firstBtnActionPerformed
 
     /**
      * @param args the command line arguments

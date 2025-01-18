@@ -65,7 +65,7 @@ public class Signin_Page extends javax.swing.JFrame {
 
         loginLbl.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         loginLbl.setForeground(new java.awt.Color(0, 153, 51));
-        loginLbl.setText("Login");
+        loginLbl.setText("Sign in");
         innerPanel.add(loginLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, 40));
 
         titleLbl.setFont(new java.awt.Font("Gadugi", 1, 36)); // NOI18N

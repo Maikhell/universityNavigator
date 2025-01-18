@@ -59,7 +59,7 @@
         <Component class="javax.swing.JProgressBar" name="splashProgress">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="cc" red="33" type="rgb"/>
+              <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="cc" red="33" type="rgb"/>

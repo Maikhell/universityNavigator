@@ -64,6 +64,10 @@ public class FrameSwitch {
         switchToFrame(currentFrame, new BsIT());
     }
 
+    public static void showBSITSched(JFrame currentFrame) {
+        switchToFrame(currentFrame, new View_Sched_IT());
+    }
+
     private static void switchToFrame(JFrame currentFrame, JFrame newFrame) {
         if (currentFrame != null) {
             currentFrame.dispose();
